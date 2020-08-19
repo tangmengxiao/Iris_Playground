@@ -5,6 +5,8 @@ class Naive_Bayes:
         self.data = np.array(X)
         self.label = np.array(Y)
 
+        print('initialized')
+
     def fit(self):
         pass
 
