@@ -6,7 +6,7 @@ from method.Perceptron import Perceptron
 from method.LDA import LDA
 from method.Logistic_Regression import Logistic_Regression
 from method.Naive_Bayes import Naive_Bayes
-
+from method.Gaussian_Dis import GDA
 # datasets
 from Iris_data import Iris_Dataset
 
@@ -42,9 +42,16 @@ model = Logistic_Regression(train_data,train_label)
 model.fit(epochs=20,lr=1e-3)
 predict, predict_prob = model.evaluate(test_data,test_label)
 
-'''
+
 
 # Naive Bayes
 model = Naive_Bayes(train_data, train_label)
+model.fit()
+predict = model.evaluate(test_data,test_label)
+
+'''
+
+# GDA
+model = GDA(train_data,train_label)
 model.fit()
 predict = model.evaluate(test_data,test_label)
