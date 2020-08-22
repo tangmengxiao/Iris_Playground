@@ -16,7 +16,6 @@ data, label = Iris.get_data()
 train_data, train_label, test_data, test_label = Iris.split_data(data, label)
 
 # 建立模型
-'''
 # Linear Regression
 model = Linear_Regression(train_data, train_label, L2=True, l=0.8)
 model.fit()
@@ -39,16 +38,14 @@ predict = model.evaluate(test_data,test_label)
 
 # Logistic Regression
 model = Logistic_Regression(train_data,train_label)
-model.fit(epochs=20,lr=1e-3)
+model.fit(epochs=100,lr=1e-3)
 predict, predict_prob = model.evaluate(test_data,test_label)
 
-
-
+'''
 # Naive Bayes
 model = Naive_Bayes(train_data, train_label)
 model.fit()
 predict = model.evaluate(test_data,test_label)
-
 '''
 
 # GDA
